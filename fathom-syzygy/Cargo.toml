@@ -1,0 +1,12 @@
+[package]
+name = "fathom-syzygy"
+version = "0.1.0"
+authors = ["Maximilian Lupke <maxlupke@gmail.com>"]
+license = "MIT"
+repository = "https://github.com/malu/fathom-syzygy"
+description = "Rust bindings to the fathom library for Syzygy Tablebases"
+edition = "2021"
+
+[dependencies]
+fathom-syzygy-sys = { version = "0.1", path = "../fathom-syzygy-sys" }
+thiserror = "1.0"

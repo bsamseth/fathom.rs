@@ -1,0 +1,8 @@
+[workspace]
+members = [
+    "fathom-syzygy-sys",
+    "fathom-syzygy"
+]
+
+[patch.crates-io]
+fathom-syzygy-sys = { path = "fathom-syzygy-sys" }
