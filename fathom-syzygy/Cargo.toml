@@ -3,6 +3,7 @@ name = "fathom-syzygy"
 version = "0.1.0"
 authors = ["Maximilian Lupke <maxlupke@gmail.com>"]
 license = "MIT"
+readme = "README.md"
 repository = "https://github.com/malu/fathom-syzygy"
 description = "Rust bindings to the fathom library for Syzygy Tablebases"
 edition = "2021"
