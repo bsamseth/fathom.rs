@@ -23,7 +23,9 @@ pub enum Error {
 static mut INITIALIZED: AtomicBool = AtomicBool::new(false);
 
 #[derive(Debug)]
-pub struct Fathom;
+pub struct Fathom {
+    _phantom: std::marker::PhantomData<()>,
+}
 
 impl Fathom {
     pub fn new<P: AsRef<Path>>(path: P) -> Result<Self, Error> {
@@ -32,7 +34,11 @@ impl Fathom {
             return Err(Error::AlreadyInitialized);
         }
 
-        Self.reload(path)
+        let fathom = Fathom {
+            _phantom: Default::default(),
+        };
+
+        fathom.reload(path)
     }
 
     pub fn reload<P: AsRef<Path>>(self, path: P) -> Result<Self, Error> {
