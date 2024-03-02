@@ -1,8 +1,6 @@
 [workspace]
-members = [
-    "fathom-syzygy-sys",
-    "fathom-syzygy"
-]
+resolver = "2"
+members = ["fathom-syzygy-sys", "fathom-syzygy"]
 
 [patch.crates-io]
 fathom-syzygy-sys = { path = "fathom-syzygy-sys" }
